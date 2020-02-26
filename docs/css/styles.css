@@ -1,7 +1,7 @@
 :root {
   /* --main-color: 33, 33, 33; */
   --main-color: 21,21,21;
-  --white-color: 225,225,225;
+  --secondary-color: 225,225,225;
   --box-shadow: 0 4px 14px 0 rgb(var(--main-color), 0.3);
 }
 
@@ -45,7 +45,7 @@ body > header h1 {
   text-align: center;
   margin: 0.5em auto;
   line-height: 80%;
-  color: rgb(var(--white-color));
+  color: rgb(var(--secondary-color));
 }
 
 body > header p {
@@ -82,7 +82,7 @@ body > header ul:before {
   position: absolute;
   left: 0;
   transform: translate(-100%,0);
-  color: var(--white-color);
+  color: var(--secondary-color);
 }
 
 
@@ -98,14 +98,18 @@ body > header ul li {
   margin-left: 1em;
 }
 
+a:focus {
+  outline: none;
+}
+
 nav a {
   display: inline-block;
   font-family: sans-serif;
-  color: rgb(var(--white-color));
+  color: rgb(var(--secondary-color));
   text-decoration: wavy;
   text-align: center;
   padding: 0.5em 1em;
-  background-color: rgba(var(--white-color), 0.25);
+  background-color: rgba(var(--secondary-color), 0.25);
   box-shadow: 2px 3px 10px 0 rgb(var(--main-color));
   border-radius: 0.25em;
   transition: transform 200ms background-color 500ms;
@@ -114,11 +118,11 @@ nav a {
   display: block;
   height: 1px;
   width: 0;
-  background-color: rgb(var(--white-color));
+  background-color: rgb(var(--secondary-color));
   transition: all 200ms;
-}nav a:hover {
-  background-color: rgba(var(--white-color), 0.5);
-}nav a:hover:after{
+}nav a:hover, nav a:focus {
+  background-color: rgba(var(--secondary-color), 0.5);
+}nav a:hover:after, nav a:focus:after {
   width: 100%;
 }
 
@@ -126,52 +130,48 @@ main {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
-  background-color: rgb(var(--white-color));
-}
-
-/* main:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  height: 1000px;
-  width: 1000px;
-  border-radius: 10px;
-  background: url('../img/SVG/cog.svg');
-  background-position: center;
-  background-size: contain;
-  opacity: 0.05;
-  animation: rotate 60s linear infinite;
-} */
-
-.blend-test {
-  position: sticky;
-  color: green;
-  top: 150px;
-  mix-blend-mode: color-dodge;
-
+  background-color: rgb(var(--secondary-color));
 }
 
 main section svg {
   width: auto;
-  height: 100vh;
+  height: 90vh;
   stroke-dasharray: 1800;
   stroke-dashoffset: 1800;
-  animation: draw-svg 10s linear forwards;
+  animation: draw-svg 6s 4s linear forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 section:target {
-  display: flex;
+  top: 0;
+  transition: top 1s;
+  z-index: 2;
+}
+
+section:not(:target) {
+  top: -100vh;
+  transition: top 0.75s;
+  z-index: 1;
+}
+
+main section {
+  padding: 9em 2em 2em 2em;
+  height: 100vh;
+  overflow: scroll;
+  color: rgb(var(--secondary-color));
 }
 
 main > section {
-  display: none;
-  padding: 9em 2em 2em 2em;
-  min-height: 100vh;
+  position: fixed;
+  width: 100vw;
   background-color: rgb(var(--main-color));
-  position: relative;
+}
+
+section [wrapper] {
+  display: flex;
   flex-wrap: wrap;
-  color: white;
 }
 
   main > section article {
@@ -193,6 +193,15 @@ main > section {
       backface-visibility: hidden;
       background-color: white;
       color: black;
+    }
+
+    article > div > div:first-of-type {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    article > div div {
+      padding: 1em;
     }
 
     article > div > div:last-of-type {
@@ -346,6 +355,7 @@ section h2 {
     width: 100%;
   }
 }
+
 @keyframes fall-letter {
   0% {
     transform: translate(0, -75vh);
