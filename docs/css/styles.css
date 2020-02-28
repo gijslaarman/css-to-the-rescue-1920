@@ -17,9 +17,9 @@ html {
 }
 
 header {
-  width: 100%;
-  position: relative;
-  z-index: 50;
+	width: 100%;
+	position: relative;
+	z-index: 50;
 }
 
 body > header {
@@ -149,41 +149,40 @@ main section svg {
 }
 
 [home] {
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  max-width: 80em;
-  top: 0;
-  left: 50%;
-  font-size: 2.5em;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1em;
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	max-width: 80em;
+	top: 0;
+	left: 50%;
+	font-size: 2.5em;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1em;
 }
 
 [russ] {
-  cursor: url('../img/russ.png'), auto;
+	cursor: url('../img/russ.png'), auto;
 }
 
 [daughters] {
-
 }
 
 [menu] {
-  overflow-x: scroll;
-  transition: top 1s;
-  position: relative;
+	overflow-x: scroll;
+	transition: top 1s;
+	position: relative;
 	background-color: rgb(var(--main-color));
 }
 
 [menu]:not(:target) {
-  top: -100vh;
+	top: -100vh;
 }
 
 [menu]:target {
-  top: 0;
+	top: 0;
 }
 
 [menu] > div {
@@ -229,14 +228,14 @@ main section svg {
 	padding: 1em;
 	cursor: pointer;
 	text-align: center;
-  transition: background-color 250ms;
-  overflow: hidden;
-  position: relative;
+	transition: background-color 250ms;
+	overflow: hidden;
+	position: relative;
 }
 
 [menu] label span {
-  z-index: 49;
-  position: relative;
+	z-index: 49;
+	position: relative;
 }
 
 [menu] label:hover {
@@ -244,22 +243,22 @@ main section svg {
 }
 
 [menu] label:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 100em;
-  width: 0;
-  height: 0;
-  background-color: rgb(var(--main-color));
-  transition: width 500ms, height 500ms;
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 100em;
+	width: 0;
+	height: 0;
+	background-color: rgb(var(--main-color));
+	transition: width 500ms, height 500ms;
 }
 
 [menu] input:checked + label:after {
-  width: 20em;
-  height: 20em;
-  animation: fillbutton 1s forwards;
+	width: 20em;
+	height: 20em;
+	animation: fillbutton 1s forwards;
 }
 
 [menu] input#tab-noshes:checked ~ div > div {
@@ -314,47 +313,48 @@ main section svg {
 
 [wrapper] {
 	display: flex;
-  flex-wrap: wrap;
-  max-width: 64em;
-  margin: 0 auto 1em;
-  justify-content: center;
+	flex-wrap: wrap;
+	max-width: 64em;
+	margin: 0 auto 1em;
+	justify-content: center;
 }
 
 [wrapper] header {
-  text-align: center;
-  margin: 0.5em;
-  margin-top: 2.5em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-  background-color: rgba(var(--main-color), 0.95);
-  padding: 1em;
-  box-shadow: 0 4px 14px 0 rgba(var(--main-color), 0.25);
+	text-align: center;
+	margin: 0.5em;
+	margin-top: 2.5em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-end;
+	background-color: rgba(var(--main-color), 0.95);
+	padding: 1em;
+	box-shadow: 0 4px 14px 0 rgba(var(--main-color), 0.25);
 }
 
 [wrapper] header p {
-  font-size: 1.5em;
-  text-transform: capitalize;
+	font-size: 1.5em;
+	text-transform: capitalize;
 }
 
-[wrapper] header p:before, [wrapper] header p:after {
-  content: '"';
+[wrapper] header p:before,
+[wrapper] header p:after {
+	content: '"';
 }
 
 blockquote {
-  margin-top: 1em;
-  width: 100%;
-  padding: 1em;
-  display: inline-block;
-  background-color: rgb(var(--secondary-color), 0.3);
-  box-shadow: inset 0 4px 14px rgba(var(--main-color), 0.25);
+	margin-top: 1em;
+	width: 100%;
+	padding: 1em;
+	display: inline-block;
+	background-color: rgb(var(--secondary-color), 0.3);
+	box-shadow: inset 0 4px 14px rgba(var(--main-color), 0.25);
 }
 
 main > section article {
 	width: 100%;
-  max-width: 31em;
-  margin: 0.5em;
+	max-width: 31em;
+	margin: 0.5em;
 	perspective: 40rem;
 }
 
@@ -376,8 +376,8 @@ article > div > div {
 }
 
 article > div > div:first-of-type {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 	justify-content: space-between;
 }
 
@@ -387,8 +387,8 @@ article > div div {
 
 article > div > div:last-of-type {
 	position: absolute;
-  background-color: rgb(var(--main-color));
-  color: rgb(var(--secondary-color));
+	background-color: rgb(var(--main-color));
+	color: rgb(var(--secondary-color));
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -397,8 +397,8 @@ article > div > div:last-of-type {
 }
 
 section h2 {
-  display: block;
-  font-size: 2em;
+	display: block;
+	font-size: 2em;
 	font-family: sans-serif;
 }
 section h2:first-letter {
