@@ -71,7 +71,7 @@ input, textarea, label {
 This time I went in guns blazing and basically creating a mess of a css file.
 
 ## Thoughts
-So I missed an entire weeks worth of work due to illness. The extra time would have helped a bit, but in all fairness it would have not made it any prettier. Or it would have not made me anymore proud of this. 
+So I missed an entire weeks worth of work due to illness. The extra time would have helped a bit, but in all fairness it would have not made it any prettier. Nor would it have made me anymore proud of this. 
 
 ## License
 This project is under [MIT License](https://github.com/gijslaarman/css-to-the-rescue-1920/blob/master/LICENSE)
