@@ -19,7 +19,7 @@ html {
 header {
   width: 100%;
   position: relative;
-  z-index: 500000;
+  z-index: 50;
 }
 
 body > header {
@@ -137,19 +137,6 @@ main {
 	background-color: rgb(var(--secondary-color));
 }
 
-main > section {
-  position: relative;
-  transition: top 1s;
-}
-
-main > section:not(:target) {
-  top: -100vh;
-}
-
-main > section:target {
-  top: 0;
-}
-
 main section svg {
 	width: auto;
 	height: 90vh;
@@ -161,9 +148,42 @@ main section svg {
 	left: 0;
 }
 
+[home] {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  max-width: 80em;
+  top: 0;
+  left: 50%;
+  font-size: 2.5em;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+}
+
+[russ] {
+  cursor: url('../img/russ.png'), auto;
+}
+
+[daughters] {
+
+}
+
 [menu] {
-	overflow-x: scroll;
+  overflow-x: scroll;
+  transition: top 1s;
+  position: relative;
 	background-color: rgb(var(--main-color));
+}
+
+[menu]:not(:target) {
+  top: -100vh;
+}
+
+[menu]:target {
+  top: 0;
 }
 
 [menu] > div {
@@ -215,7 +235,7 @@ main section svg {
 }
 
 [menu] label span {
-  z-index: 99;
+  z-index: 49;
   position: relative;
 }
 
@@ -391,7 +411,7 @@ section h2:first-letter {
 	height: 100%;
 	width: 100%;
 	background-color: rgb(var(--main-color));
-	z-index: 9;
+	z-index: 99;
 	animation: remove-overlay 700ms 3.1s forwards;
 	display: flex;
 	align-items: center;
